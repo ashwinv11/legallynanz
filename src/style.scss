@@ -10,13 +10,13 @@
 
 // Custom styles
 
-// .home h1 {
-//   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-//   background: rgba(255,255,255,0.1);
-//   border-radius: 2px;
-// }
-
 .reveal p {
   font-family: 'EB Garamond', serif;
+  white-space: pre-line;
 }
 
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 600px;
+}

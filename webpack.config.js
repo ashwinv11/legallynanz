@@ -4,9 +4,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    carousel: './src/carousel.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name]-bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
@@ -27,7 +30,8 @@ module.exports = {
     new WriteFilePlugin(),
     new CopyWebpackPlugin([
       { from: 'src/images', to: 'images' },
-      { from: 'src/index.html', to: 'index.html' }
+      { from: 'src/index.html', to: 'index.html' },
+      { from: 'src/bgs', to: 'bgs' }
     ])
   ]
 };
