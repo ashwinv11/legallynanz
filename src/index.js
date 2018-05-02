@@ -4,6 +4,7 @@ import '../node_modules/reveal.js/css/theme/white.css';
 import './style.scss';
 
 Reveal.initialize({
+  viewDistance: 5,
   history: true,
   center: false,
   controls: false,
