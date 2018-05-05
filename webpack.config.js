@@ -17,6 +17,7 @@ module.exports = {
   },
   module: {
     rules: [
+      { parser: { amd: false } },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
       { test: /\.scss$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ] },
       {
@@ -31,7 +32,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'src/images', to: 'images' },
       { from: 'src/index.html', to: 'index.html' },
-      { from: 'src/bgs', to: 'bgs' }
+      { from: 'src/bgs', to: 'bgs' },
+      { from: 'src/vendor', to: 'vendor' }
     ])
   ]
 };

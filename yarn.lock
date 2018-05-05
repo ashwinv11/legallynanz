@@ -2802,6 +2802,10 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
+headjs@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/headjs/-/headjs-1.0.3.tgz#b368ebbfa8b6c3961c1a33105ec811d54dd8783f"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"

@@ -1,11 +1,17 @@
+@import 'fonts';
+
 // Reveal Overrides
 
 .reveal h1 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Tiempos Headline', sans-serif;
 }
 
 .reveal .slide-background.present.text-focus {
   opacity: 0.2;
+}
+
+.slide-menu-toolbar li:first-child {
+  display: none !important;
 }
 
 // Custom styles

@@ -1,7 +1,10 @@
+import Head from 'headjs/dist/1.0.0/head';
 import Reveal from 'reveal.js';
 import '../node_modules/reveal.js/css/reveal.css';
 import '../node_modules/reveal.js/css/theme/white.css';
 import './style.scss';
+
+window.Reveal = Reveal;
 
 Reveal.initialize({
   viewDistance: 5,
@@ -14,7 +17,10 @@ Reveal.initialize({
   autoPlayMedia: true,
   mouseWheel: false,
   transition: 'slide',
-  autoPlayMedia: true
+  autoPlayMedia: true,
+  dependencies: [
+    { src: 'vendor/reveal-js-menu/menu.js' }
+  ]
 });
 
 // let currentScrollableListener = null;
