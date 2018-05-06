@@ -1,9 +1,9 @@
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
-
 module.exports = {
   entry: {
     index: './src/index.js',
@@ -36,7 +36,15 @@ module.exports = {
       { from: 'src/index.html', to: 'index.html' },
       { from: 'src/bgs', to: 'bgs' },
       { from: 'src/vendor', to: 'vendor' }
-    ]),
-    new UglifyJSPlugin()
-  ]
+    ])
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJSPlugin({
+        cache: true,
+        parallel: true,
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  }
 };
