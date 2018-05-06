@@ -7,6 +7,7 @@ import './style.scss';
 window.Reveal = Reveal;
 
 Reveal.initialize({
+  overview: false,
   viewDistance: 5,
   history: true,
   center: false,
@@ -23,18 +24,14 @@ Reveal.initialize({
   ]
 });
 
-// let currentScrollableListener = null;
-
 Reveal.addEventListener('fragmentshown', function(event) {
   let bgEl = document.getElementsByClassName('slide-background present')[1];
   bgEl.classList.add('text-focus');
-  // currentScrollableListener = setInterval(() => pageScroll(event.fragment), 1);
 });
 
 Reveal.addEventListener('fragmenthidden', function(event) {
   let bgEl = document.getElementsByClassName('slide-background present')[1];
   bgEl.classList.remove('text-focus');
-  // clearInterval(currentScrollableListener);
 });
 
 const pageScroll = (el) => {

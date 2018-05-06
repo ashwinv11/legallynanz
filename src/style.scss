@@ -14,7 +14,17 @@
   display: none !important;
 }
 
+.submission-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 // Custom styles
+
+.home h1 {
+  margin-bottom: 100px;
+}
 
 .reveal p {
   font-family: 'EB Garamond', serif;

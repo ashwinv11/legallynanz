@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
@@ -30,6 +31,7 @@ module.exports = {
     new CleanWebpackPlugin('dist', {}),
     new WriteFilePlugin(),
     new CopyWebpackPlugin([
+      { from: 'src/favicon.ico', to: 'favicon.ico' },
       { from: 'src/images', to: 'images' },
       { from: 'src/index.html', to: 'index.html' },
       { from: 'src/bgs', to: 'bgs' },
