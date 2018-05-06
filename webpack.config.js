@@ -36,6 +36,7 @@ module.exports = {
       { from: 'src/index.html', to: 'index.html' },
       { from: 'src/bgs', to: 'bgs' },
       { from: 'src/vendor', to: 'vendor' }
-    ])
+    ]),
+    new UglifyJSPlugin()
   ]
 };
